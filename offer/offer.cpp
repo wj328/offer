@@ -18,16 +18,7 @@ void swap3(int &a, int &b)//同样不适用于同一个值进行交换,因为a,b是同一个内存块
 	b = a-b;
 	a = a-b;
 }
-/*
-int main()
-{
-	int a = 1;
-	//int b = 2;
-	swap(a, a);
-	cout<<"a:"<<a<<" ";
-	//cout<<"b:"<<b<<endl;
-}
-*/
+
 void swap2(int &a, int &b)//&
 {
 	int c = a;
@@ -67,9 +58,8 @@ int main()
 	return 0;
 }
 #endif
-
-//求最大子集
-
+#if 0
+//用位运算求加法
 int n=0;
 int k=0;
 int add(int a, int b)
@@ -105,3 +95,6 @@ int main()
 	cout<<sum1<<endl;
 	return 0;
 }
+#endif
+
+//求最大子集
