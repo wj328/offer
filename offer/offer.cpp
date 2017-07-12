@@ -57,35 +57,33 @@ int main()
 	//Perm(ar, 0, n-1);
 	return 0;
 }
-#endif
-#if 0
-//用位运算求加法
+
+//用位运算求和
 int n=0;
-int k=0;
+int k=0;      13-1101（a）   11-1011(b)
 int add(int a, int b)
 {
-	for(int i=1; i; i<<=1)
+	for(int i=1; i; i<<=1)//b中此位为1,结束条件为i,循环32次直到左移为0
 	{
 		n++;
 		if(i & b)
 		{
-			for(int j=i; j; j<<=1)
+			for(int j=i; j; j<<=1)//2、左移，准备进位
 			{
 				k++;
-				if(j & a)
+				if(j & a)//同为1
 				{
-					a &= (~j);
+					a &= (~j);//1、将该位置0
 				}
 				else
 				{
-					a |= j;
+					a |= j;//3、进位
 					break;
 				}
 			}
-			cout<<n<<" "<<k<<"-----";
 		}
 	}
-	//cout<<n<<endl;
+	cout<<n<<endl;
 	return a;
 }
 
